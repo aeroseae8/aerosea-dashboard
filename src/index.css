@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a2a43;
+  --color-deep: #0b4f5c;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body { @apply bg-slate-100 text-slate-800 antialiased; }
+
+@keyframes scan { 0% { top: 0 } 100% { top: 100% } }
+.scan-line { animation: scan 6s linear infinite; }
+@keyframes drift { 0%,100% { transform: translateX(0) } 50% { transform: translateX(-14px) } }
+.drift { animation: drift 9s ease-in-out infinite; }
